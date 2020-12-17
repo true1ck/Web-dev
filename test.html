@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Mobile No. Validation</title>
+<script type="text/javascript">
+function validateMobNo(mobno){
+    var mobno2;
+    var flag=false;
+    var mlen= mobno.length;
+    //alert(mobno.substr(3,mobno.length-3));
+    if(mobno.charAt(0)!='+' && mlen==10){
+        mobno2="+91-"+mobno;
+        alert("your mobile wants to be "+mobno2);
+        flag=true;
+    }
+    else
+        alert("Please correct your mobile No");
+    
+         
+}
+</script>
+</head>
+<body>
+ 
+<form name="mobvalidate">
+<input type="text" id="mobno" />
+<input type="button" value="VALIDATE" onclick="validateMobNo(mobno.value)" />
+</form>
+</body>
+</html>
